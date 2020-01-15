@@ -15,7 +15,7 @@ android
     targetSdkVersion rootProject.compileSdkVersion
 
     versionCode 15
-    versionName "1.7.1"
+    versionName "1.8.0-001-SNAPSHOT"
   }
 
   dataBinding
@@ -44,7 +44,7 @@ dependencies
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version")
 
   // Android
-  implementation("com.android.support:recyclerview-v7:${appcompat_support_library_version}")
+  implementation('androidx.recyclerview:recyclerview:1.1.0')
 }
 
 task sourcesJar(type: Jar) {

@@ -1,6 +1,6 @@
 package com.smartnsoft.smartrecyclerviewsample.wrappers;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 /**
  * We have to register each type of wrapper in the IntDef to avoid recycling issues

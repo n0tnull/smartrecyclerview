@@ -1,8 +1,8 @@
 package com.smartnsoft.recyclerview.widget;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.Adapter;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;

@@ -3,13 +3,12 @@ package com.smartnsoft.smartrecyclerviewsample;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.smartnsoft.recyclerview.wrapper.SmartRecyclerViewWrapper;
 
 import com.smartnsoft.smartrecyclerviewsample.bo.Person;
 import com.smartnsoft.smartrecyclerviewsample.wrappers.PersonWrapper;
-import com.smartnsoft.smartrecyclerviewsample.wrappers.SimpleTextWrapper;
 
 /**
  * An activity using a SmartRecyclerAdapter and Wrappers with Android Databind

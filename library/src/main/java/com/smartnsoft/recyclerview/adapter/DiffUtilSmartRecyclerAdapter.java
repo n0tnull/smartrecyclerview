@@ -3,8 +3,8 @@ package com.smartnsoft.recyclerview.adapter;
 import java.util.List;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.util.DiffUtil;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DiffUtil;
 
 import com.smartnsoft.recyclerview.attributes.SmartRecyclerAttributes;
 import com.smartnsoft.recyclerview.wrapper.DiffUtilSmartRecyclerViewWrapper;

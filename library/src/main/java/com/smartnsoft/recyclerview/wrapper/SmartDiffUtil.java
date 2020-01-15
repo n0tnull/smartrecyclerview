@@ -1,6 +1,6 @@
 package com.smartnsoft.recyclerview.wrapper;
 
-import android.support.v7.util.DiffUtil;
+import androidx.recyclerview.widget.DiffUtil;
 
 import com.smartnsoft.recyclerview.adapter.DiffUtilSmartRecyclerAdapter;
 import com.smartnsoft.recyclerview.adapter.DiffUtilSmartRecyclerAdapter.SmartDiffUtilCallback;

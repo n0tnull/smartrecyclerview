@@ -1,13 +1,10 @@
 package com.smartnsoft.smartrecyclerviewsample.wrappers;
 
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 import android.view.View;
 
 import com.smartnsoft.recyclerview.attributes.SmartRecyclerAttributes;
-
-import com.smartnsoft.smartrecyclerviewsample.BR;
-import com.smartnsoft.smartrecyclerviewsample.databinding.PersonItemBinding;
 
 /**
  * An Attributes which can be used with Android Databinding

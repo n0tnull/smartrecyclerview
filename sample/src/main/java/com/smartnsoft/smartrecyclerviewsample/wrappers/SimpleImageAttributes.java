@@ -1,6 +1,6 @@
 package com.smartnsoft.smartrecyclerviewsample.wrappers;
 
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 import android.view.View;
 import android.widget.ImageView;
 

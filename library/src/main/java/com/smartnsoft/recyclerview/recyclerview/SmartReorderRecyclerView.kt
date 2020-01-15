@@ -23,15 +23,15 @@
 package com.smartnsoft.recyclerview.recyclerview
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.helper.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.ItemTouchHelper
 import android.util.AttributeSet
 import com.smartnsoft.recyclerview.adapter.SmartRecyclerAdapter
 
 /**
- * A [android.support.v7.widget.RecyclerView] that provides reordering with drag&amp;drop.
+ * A [androidx.recyclerview.widget.RecyclerView] that provides reordering with drag&amp;drop.
  * The Adapter has to be of type [SmartRecyclerAdapter]. Furthermore you have to provide stable ids
- * [android.support.v7.widget.RecyclerView.Adapter.setHasStableIds]
+ * [androidx.recyclerview.widget.RecyclerView.Adapter.setHasStableIds]
  *
  * @author Adrien Vitti
  * @since 2019.07.15

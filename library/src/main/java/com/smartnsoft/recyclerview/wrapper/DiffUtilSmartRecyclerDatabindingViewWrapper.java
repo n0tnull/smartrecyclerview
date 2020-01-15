@@ -1,6 +1,6 @@
 package com.smartnsoft.recyclerview.wrapper;
 
-import android.support.annotation.LayoutRes;
+import androidx.annotation.LayoutRes;
 
 import com.smartnsoft.recyclerview.adapter.DiffUtilSmartRecyclerAdapter;
 
