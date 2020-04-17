@@ -4,30 +4,22 @@ Enhanced RecyclerView
 
 ## Usage
 
-### From JCenter
+Library releases are available on Bintray and JCenter for stable versions. Jitpack can be used for snapshots versions
 
-Library releases are available on JCenter
+Bintray : [ ![Download](https://api.bintray.com/packages/n0tnull/maven/smartrecyclerview/images/download.svg) ](https://bintray.com/n0tnull/maven/smartrecyclerview/_latestVersion)
 
 **Gradle**
 
 ```groovy
-compile 'com.smartnsoft:recyclerview:1.5'
+implementation 'com.smartnsoft:recyclerview:$latest_version'
 ```
 
-**Maven**
+## Author and contributors
 
-```xml
-<dependency>
-  <groupId>com.smartnsoft</groupId>
-  <artifactId>recyclerview</artifactId>
-  <version>1.5</version>
-  <type>aar</type>
-</dependency>
-```
-## Author
+This library was developped at [Smart&Soft](https://github.com/smartnsoft) and has been forked here to continue development.
 
-The Android Team @Smart&Soft, software agency http://www.smartnsoft.com
+Thanks to [Ludovic Roland](https://github.com/ludovicroland), [Anthony Msihid](https://github.com/Maltyz), [David Fournier](https://github.com/david-fournier-smartnsoft), [Raphaël Kiffer](https://github.com/ArchOrn) and [Jocelyn Girard](https://github.com/jocelyngirard) for their contribution
 
 ## License
 
-smartrecyclerview-android is available under the MIT license. See the LICENSE file for more info.
+smartrecyclerview is available under the MIT license. See the LICENSE file for more info.
