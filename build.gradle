@@ -29,8 +29,8 @@ allprojects
     appcompat_support_library_version = '28.0.0'
     compileSdkVersion = 28
     minSdkVersion = 14
-    GROUP_ID = 'com.smartnsoft'
-    ARTIFACT_ID = 'recyclerview'
+    GROUP_ID = 'com.n0tnull'
+    ARTIFACT_ID = 'smartrecyclerview'
     LIBRARY_NAME = "SmartRecyclerView"
   }
 }

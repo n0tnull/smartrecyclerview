@@ -15,7 +15,7 @@ android
     targetSdkVersion rootProject.compileSdkVersion
 
     versionCode 15
-    versionName "1.7.0"
+    versionName "1.7.1"
   }
 
   dataBinding
@@ -158,14 +158,9 @@ uploadArchives
   {
     mavenDeployer
     {
-      repository(url: "https://api.bintray.com/maven/smartnsoft/maven/smartrecyclerview/;publish=1")
+      repository(url: "https://api.bintray.com/maven/n0tnull/maven/smartrecyclerview/;publish=1")
       {
         authentication(userName: findProperty("bintrayUsername") ?: "", password: findProperty("bintrayKey") ?: "")
-      }
-
-      snapshotRepository(url: nexusSnapshotUrl)
-      {
-        authentication(userName: findProperty("nexusUsername") ?: "", password: findProperty("nexusPassword") ?: "")
       }
 
       pom.project
