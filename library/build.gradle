@@ -15,7 +15,7 @@ android
     targetSdkVersion rootProject.compileSdkVersion
 
     versionCode 15
-    versionName "1.8.0-001-SNAPSHOT"
+    versionName rootProject.LIBRARY_VERSION_NAME
   }
 
   dataBinding
