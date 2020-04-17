@@ -14,22 +14,20 @@ import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper
  */
 
 class SampleDiffUtilSmartRecyclerAdapter(context: Context)
-  : DiffUtilSmartRecyclerAdapter(context)
-{
+    : DiffUtilSmartRecyclerAdapter(context) {
 
-  class ListDiffUtilCallback(oldWrappers: List<SmartRecyclerViewWrapper<*>>, newWrappers: List<SmartRecyclerViewWrapper<*>>)
-    : DiffUtilSmartRecyclerAdapter.SmartDiffUtilCallback(oldWrappers, newWrappers)
-  {
+    class ListDiffUtilCallback(oldWrappers: List<SmartRecyclerViewWrapper<*>>, newWrappers: List<SmartRecyclerViewWrapper<*>>)
+        : DiffUtilSmartRecyclerAdapter.SmartDiffUtilCallback(oldWrappers, newWrappers) {
 
-    override fun getChangePayloadCustom(oldItemPosition: Int, newItemPosition: Int, oldBusinessObject: Any?, newBusinessObject: Any?): Any? =
-        SmartDiffUtilCallback.ITEM_CHANGED_PAYLOAD
+        override fun getChangePayloadCustom(oldItemPosition: Int, newItemPosition: Int, oldBusinessObject: Any?, newBusinessObject: Any?): Any? =
+                SmartDiffUtilCallback.ITEM_CHANGED_PAYLOAD
 
-  }
+    }
 
-  override fun <T : SmartDiffUtilCallback?> getDiffUtilCallback(oldWrappers: List<SmartRecyclerViewWrapper<*>>, newWrappers: List<SmartRecyclerViewWrapper<*>>): T =
-      ListDiffUtilCallback(oldWrappers, newWrappers) as T
+    override fun <T : SmartDiffUtilCallback> getDiffUtilCallback(oldWrappers: List<SmartRecyclerViewWrapper<*>>, newWrappers: List<SmartRecyclerViewWrapper<*>>): T =
+            ListDiffUtilCallback(oldWrappers, newWrappers) as T
 
-  override fun onBindViewHolderCustom(holder: SmartRecyclerAttributes<*>?, position: Int, payload: Any?): Boolean =
-      false
+    override fun onBindViewHolderCustom(holder: SmartRecyclerAttributes<*>?, position: Int, payload: Any?): Boolean =
+            false
 
 }

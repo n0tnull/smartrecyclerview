@@ -5,14 +5,12 @@ package com.smartnsoft.smartrecyclerviewsample.bo;
  * @since 2018.01.24
  */
 
-public class Person
-{
+public class Person {
 
-  public final String name;
+    public final String name;
 
-  public Person(String name)
-  {
-    this.name = name;
-  }
+    public Person(String name) {
+        this.name = name;
+    }
 
 }

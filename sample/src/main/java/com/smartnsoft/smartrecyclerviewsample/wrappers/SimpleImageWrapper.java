@@ -1,10 +1,15 @@
 package com.smartnsoft.smartrecyclerviewsample.wrappers;
 
 import android.content.Context;
-import androidx.annotation.DrawableRes;
 import android.view.View;
 
+import androidx.annotation.DrawableRes;
+
+import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
+import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper;
 import com.smartnsoft.smartrecyclerviewsample.R;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * A RecyclerViewWrapper with an DrawableRes integer as business object
@@ -14,18 +19,15 @@ import com.smartnsoft.smartrecyclerviewsample.R;
  */
 
 public final class SimpleImageWrapper
-    extends AbstractSmartRecyclerViewWrapper<Integer>
-{
+        extends SmartRecyclerViewWrapper<Integer> {
 
-  public SimpleImageWrapper(@DrawableRes Integer businessObject)
-  {
-    super(businessObject, WrapperType.SimpleImageWrapper, R.layout.simple_image_item);
-  }
+    public SimpleImageWrapper(@DrawableRes Integer businessObject) {
+        super(businessObject, R.layout.simple_image_item);
+    }
 
-  @Override
-  protected Object extractNewViewAttributes(Context context, View view, @DrawableRes Integer businessObject)
-  {
-    return new SimpleImageAttributes(view);
-  }
+    @Override
+    protected SmartRecyclerAttributes<Integer> extractNewViewAttributes(@NotNull Context context, @NotNull View view, @DrawableRes Integer businessObject) {
+        return new SimpleImageAttributes(view);
+    }
 
 }

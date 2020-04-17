@@ -9,19 +9,16 @@ import com.smartnsoft.smartrecyclerview.adapter.SmartRecyclerAdapter;
  * @since 2018.01.24
  */
 public class SimpleRecyclerActivity
-    extends AbstractRecyclerActivity
-{
+        extends AbstractRecyclerActivity {
 
-  @Override
-  protected int getLayoutId()
-  {
-    return R.layout.simple_recycler_activity;
-  }
+    @Override
+    protected int getLayoutId() {
+        return R.layout.simple_recycler_activity;
+    }
 
-  @Override
-  protected SmartRecyclerAdapter createRecyclerAdapter()
-  {
-    return new SmartRecyclerAdapter(this, true);
-  }
+    @Override
+    protected SmartRecyclerAdapter createRecyclerAdapter() {
+        return new SmartRecyclerAdapter(this, true);
+    }
 
 }

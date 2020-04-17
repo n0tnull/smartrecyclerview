@@ -19,36 +19,22 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
+package com.smartnsoft.smartrecyclerview.wrapper
 
-package com.smartnsoft.smartrecyclerview.wrapper;
-
-import androidx.annotation.LayoutRes;
-
-import com.smartnsoft.smartrecyclerview.adapter.DiffUtilSmartRecyclerAdapter;
 
 /**
- * A {@link SmartSpanRecyclerViewWrapper} that implements the {@link SmartDiffUtil} interface in order to be used with the {@link DiffUtilSmartRecyclerAdapter}.
+ * Wrappers use in the [com.smartnsoft.smartrecyclerview.adapter.DiffUtilSmartRecyclerAdapter] class have to implement this interface
  *
- * @param <BusinessObjectClass> the business object class which is represented by the current wrapper
  * @author Ludovic Roland
- * @see SmartSpanRecyclerViewWrapper
  * @since 2017.09.27
  */
-public abstract class DiffUtilSmartSpanRecyclerViewWrapper<BusinessObjectClass>
-    extends SmartSpanRecyclerViewWrapper<BusinessObjectClass>
-    implements SmartDiffUtil
-{
-
-  protected DiffUtilSmartSpanRecyclerViewWrapper(BusinessObjectClass businessObject, int type,
-      @LayoutRes int layoutResourceId, int spanSize)
-  {
-    super(businessObject, type, layoutResourceId, spanSize);
-  }
-
-  @Override
-  public long getId()
-  {
-    throw new UnsupportedOperationException("You have to override the 'getId' method in order to return the unique identifier the of the item in the adapter");
-  }
-
+interface SmartDiffUtil {
+    /**
+     * Calls into the [com.smartnsoft.smartrecyclerview.adapter.DiffUtilSmartRecyclerAdapter.SmartDiffUtilCallback.areContentsTheSame]
+     * methods to to check whether two items have the same data.
+     *
+     * @return the hashcode of the item
+     * @see androidx.recyclerview.widget.DiffUtil.Callback.areContentsTheSame
+     */
+    val diffUtilHashCode: Long
 }

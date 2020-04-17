@@ -1,11 +1,11 @@
 package com.smartnsoft.smartrecyclerviewsample.wrappers;
 
-import androidx.annotation.DrawableRes;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
+import androidx.annotation.DrawableRes;
 
+import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
 import com.smartnsoft.smartrecyclerviewsample.R;
 
 /**
@@ -15,22 +15,19 @@ import com.smartnsoft.smartrecyclerviewsample.R;
  * @since 2018.01.22
  */
 final class SimpleImageAttributes
-    extends SmartRecyclerAttributes<Integer>
-{
+        extends SmartRecyclerAttributes<Integer> {
 
-  private final ImageView imageView;
+    private final ImageView imageView;
 
-  SimpleImageAttributes(View view)
-  {
-    super(view);
-    imageView = view.findViewById(R.id.imageView);
-  }
+    SimpleImageAttributes(View view) {
+        super(view);
+        imageView = view.findViewById(R.id.imageView);
+    }
 
-  @Override
-  public void onBusinessObjectUpdated(@DrawableRes Integer businessObject, boolean isSelected)
-  {
-    super.onBusinessObjectUpdated(businessObject, isSelected);
-    imageView.setImageResource(businessObject);
-  }
+    @Override
+    public void onBusinessObjectUpdated(@DrawableRes Integer businessObject, boolean isSelected) {
+        super.onBusinessObjectUpdated(businessObject, isSelected);
+        imageView.setImageResource(businessObject);
+    }
 
 }

@@ -13,17 +13,14 @@ import com.smartnsoft.smartrecyclerviewsample.bo.Person;
  */
 
 public final class PersonAttributes
-    extends AbstractDataBindedAttributes<Person>
-{
+        extends AbstractDataBindedAttributes<Person> {
 
-  public PersonAttributes(View view)
-  {
-    super(view);
-  }
+    public PersonAttributes(View view) {
+        super(view);
+    }
 
-  @Override
-  protected int getVariableID()
-  {
-    return BR.person;
-  }
+    @Override
+    protected int getVariableID() {
+        return BR.person;
+    }
 }

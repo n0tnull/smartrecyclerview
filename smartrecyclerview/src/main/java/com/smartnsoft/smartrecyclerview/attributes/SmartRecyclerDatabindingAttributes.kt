@@ -19,46 +19,33 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
+package com.smartnsoft.smartrecyclerview.attributes
 
-package com.smartnsoft.smartrecyclerview.attributes;
-
-import androidx.databinding.ViewDataBinding;
-import androidx.annotation.CallSuper;
+import androidx.annotation.CallSuper
+import androidx.databinding.ViewDataBinding
 
 /**
- * A {@link SmartRecyclerAttributes} that uses databinding.
+ * A [SmartRecyclerAttributes] that uses databinding.
  *
  * @author Ludovic Roland
  * @since 2018.07.04
  */
-public abstract class SmartRecyclerDatabindingAttributes<BusinessObjectType>
-    extends SmartRecyclerAttributes<BusinessObjectType>
-{
+abstract class SmartRecyclerDatabindingAttributes<BusinessObjectType>(protected val viewDataBinding: ViewDataBinding)
+    : SmartRecyclerAttributes<BusinessObjectType>(viewDataBinding.root) {
 
-  protected ViewDataBinding viewDataBinding;
-
-  public SmartRecyclerDatabindingAttributes(ViewDataBinding viewDataBinding)
-  {
-    super(viewDataBinding.getRoot());
-
-    this.viewDataBinding = viewDataBinding;
-    this.context = itemView.getContext();
-  }
-
-  @CallSuper
-  @Override
-  public void update(BusinessObjectType businessObject, boolean isSelected)
-  {
-    final long businessHashCode = System.identityHashCode(businessObject);
-    if (businessObjectIdentifier != businessHashCode)
-    {
-      bindViewModel(businessObject);
-      onBusinessObjectUpdated(businessObject, isSelected);
-
-      businessObjectIdentifier = businessHashCode;
+    @CallSuper
+    override fun update(businessObject: BusinessObjectType, isSelected: Boolean) {
+        val businessHashCode = System.identityHashCode(businessObject).toLong()
+        if (businessObjectIdentifier != businessHashCode) {
+            bindViewModel(businessObject)
+            onBusinessObjectUpdated(businessObject, isSelected)
+            businessObjectIdentifier = businessHashCode
+        }
     }
-  }
 
-  protected abstract void bindViewModel(BusinessObjectType businessObject);
+    protected abstract fun bindViewModel(businessObject: BusinessObjectType)
 
+    init {
+        context = itemView.context
+    }
 }

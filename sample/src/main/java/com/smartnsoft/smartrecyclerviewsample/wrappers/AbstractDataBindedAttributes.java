@@ -1,8 +1,9 @@
 package com.smartnsoft.smartrecyclerviewsample.wrappers;
 
+import android.view.View;
+
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import android.view.View;
 
 import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
 
@@ -14,24 +15,21 @@ import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
  */
 
 abstract class AbstractDataBindedAttributes<T>
-    extends SmartRecyclerAttributes<T>
-{
+        extends SmartRecyclerAttributes<T> {
 
-  protected final ViewDataBinding dataBinding;
+    protected final ViewDataBinding dataBinding;
 
-  public AbstractDataBindedAttributes(View view)
-  {
-    super(view);
-    dataBinding = DataBindingUtil.getBinding(view);
-  }
+    public AbstractDataBindedAttributes(View view) {
+        super(view);
+        dataBinding = DataBindingUtil.getBinding(view);
+    }
 
-  @Override
-  public void onBusinessObjectUpdated(T businessObject, boolean isSelected)
-  {
-    super.onBusinessObjectUpdated(businessObject, isSelected);
-    dataBinding.setVariable(getVariableID(), businessObject);
-  }
+    @Override
+    public void onBusinessObjectUpdated(T businessObject, boolean isSelected) {
+        super.onBusinessObjectUpdated(businessObject, isSelected);
+        dataBinding.setVariable(getVariableID(), businessObject);
+    }
 
-  protected abstract int getVariableID();
+    protected abstract int getVariableID();
 
 }

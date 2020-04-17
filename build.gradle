@@ -32,6 +32,8 @@ allprojects
     ARTIFACT_ID = 'smartrecyclerview'
     LIBRARY_NAME = "SmartRecyclerView"
     LIBRARY_VERSION_NAME="1.8.0"
+
+    viewbinding_version = '3.6.2'
   }
 }
 

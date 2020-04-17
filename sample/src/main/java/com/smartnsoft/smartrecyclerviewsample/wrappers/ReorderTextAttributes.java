@@ -4,8 +4,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.smartnsoft.smartrecyclerview.attributes.SmartReorderRecyclerAttributes;
-
 import com.smartnsoft.smartrecyclerviewsample.R;
+
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -15,32 +15,28 @@ import org.jetbrains.annotations.Nullable;
  * @since 2019.07.15
  */
 final class ReorderTextAttributes
-    extends SmartReorderRecyclerAttributes<String>
-{
+        extends SmartReorderRecyclerAttributes<String> {
 
-  private final TextView textView;
+    private final TextView textView;
 
-  private final View reorderIcon;
+    private final View reorderIcon;
 
-  ReorderTextAttributes(View view)
-  {
-    super(view);
-    textView = view.findViewById(R.id.textView);
-    reorderIcon = view.findViewById(R.id.reorderIcon);
-  }
+    ReorderTextAttributes(View view) {
+        super(view);
+        textView = view.findViewById(R.id.textView);
+        reorderIcon = view.findViewById(R.id.reorderIcon);
+    }
 
-  @Override
-  public void onBusinessObjectUpdated(String businessObject, boolean isSelected)
-  {
-    super.onBusinessObjectUpdated(businessObject, isSelected);
-    textView.setText(businessObject);
-  }
+    @Override
+    public void onBusinessObjectUpdated(String businessObject, boolean isSelected) {
+        super.onBusinessObjectUpdated(businessObject, isSelected);
+        textView.setText(businessObject);
+    }
 
-  @Nullable
-  @Override
-  public View getTriggerViewForReorder()
-  {
-    return reorderIcon;
-  }
+    @Nullable
+    @Override
+    public View getTriggerViewForReorder() {
+        return reorderIcon;
+    }
 
 }

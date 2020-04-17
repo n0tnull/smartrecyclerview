@@ -1,12 +1,17 @@
 package com.smartnsoft.smartrecyclerviewsample.wrappers;
 
 import android.content.Context;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
-import androidx.annotation.LayoutRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.LayoutRes;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
+
+import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper;
+
+import org.jetbrains.annotations.NotNull;
 
 /**
  * A Wrapper which should be used with Android Databinding
@@ -16,28 +21,24 @@ import android.view.ViewGroup;
  */
 
 abstract class AbstractDataBindedViewWrapper<T>
-    extends AbstractSmartRecyclerViewWrapper<T>
-{
+        extends SmartRecyclerViewWrapper<T> {
 
-  @LayoutRes
-  private int layoutResourceId;
+    @LayoutRes
+    private int layoutResourceId;
 
-  AbstractDataBindedViewWrapper(T businessObject, int type, int layoutResourceId)
-  {
-    super(businessObject, type, layoutResourceId);
-    this.layoutResourceId = layoutResourceId;
-  }
-
-  public View getNewView(ViewGroup parent, Context context)
-  {
-    final ViewDataBinding viewDataBinding = DataBindingUtil.inflate(LayoutInflater.from(context), layoutResourceId, parent, false);
-    if (viewDataBinding == null)
-    {
-      throw new IllegalArgumentException("The given layout is not usable with data binding");
+    AbstractDataBindedViewWrapper(T businessObject, int layoutResourceId) {
+        super(businessObject, layoutResourceId);
+        this.layoutResourceId = layoutResourceId;
     }
-    final View view = viewDataBinding.getRoot();
-    view.setTag(extractNewViewAttributes(context, view, this.getBusinessObject()));
-    return view;
-  }
+
+    public View getNewView(@NotNull ViewGroup parent, @NotNull Context context) {
+        final ViewDataBinding viewDataBinding = DataBindingUtil.inflate(LayoutInflater.from(context), layoutResourceId, parent, false);
+        if (viewDataBinding == null) {
+            throw new IllegalArgumentException("The given layout is not usable with data binding");
+        }
+        final View view = viewDataBinding.getRoot();
+        view.setTag(extractNewViewAttributes(context, view, this.getBusinessObject()));
+        return view;
+    }
 
 }

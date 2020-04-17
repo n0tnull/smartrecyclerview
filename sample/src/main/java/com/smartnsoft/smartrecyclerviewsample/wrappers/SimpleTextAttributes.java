@@ -4,7 +4,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
-
 import com.smartnsoft.smartrecyclerviewsample.R;
 
 /**
@@ -14,22 +13,19 @@ import com.smartnsoft.smartrecyclerviewsample.R;
  * @since 2018.01.22
  */
 final class SimpleTextAttributes
-    extends SmartRecyclerAttributes<String>
-{
+        extends SmartRecyclerAttributes<String> {
 
-  private final TextView textView;
+    private final TextView textView;
 
-  SimpleTextAttributes(View view)
-  {
-    super(view);
-    textView = view.findViewById(R.id.textView);
-  }
+    SimpleTextAttributes(View view) {
+        super(view);
+        textView = view.findViewById(R.id.textView);
+    }
 
-  @Override
-  public void onBusinessObjectUpdated(String businessObject, boolean isSelected)
-  {
-    super.onBusinessObjectUpdated(businessObject, isSelected);
-    textView.setText(businessObject);
-  }
+    @Override
+    public void onBusinessObjectUpdated(String businessObject, boolean isSelected) {
+        super.onBusinessObjectUpdated(businessObject, isSelected);
+        textView.setText(businessObject);
+    }
 
 }

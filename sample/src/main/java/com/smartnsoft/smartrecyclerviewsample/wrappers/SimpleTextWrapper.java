@@ -3,7 +3,12 @@ package com.smartnsoft.smartrecyclerviewsample.wrappers;
 import android.content.Context;
 import android.view.View;
 
+import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
+import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper;
 import com.smartnsoft.smartrecyclerviewsample.R;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * A RecyclerViewWrapper with a simple String as business object
@@ -13,18 +18,16 @@ import com.smartnsoft.smartrecyclerviewsample.R;
  */
 
 public final class SimpleTextWrapper
-    extends AbstractSmartRecyclerViewWrapper<String>
-{
+        extends SmartRecyclerViewWrapper<String> {
 
-  public SimpleTextWrapper(String businessObject)
-  {
-    super(businessObject, WrapperType.SimpleTextWrapper, R.layout.simple_text_item);
-  }
+    public SimpleTextWrapper(String businessObject) {
+        super(businessObject, R.layout.simple_text_item);
+    }
 
-  @Override
-  protected Object extractNewViewAttributes(Context context, View view, String businessObject)
-  {
-    return new SimpleTextAttributes(view);
-  }
+    @Nullable
+    @Override
+    protected SmartRecyclerAttributes<String> extractNewViewAttributes(@NotNull Context context, @NotNull View view, String s) {
+        return new SimpleTextAttributes(view);
+    }
 
 }
