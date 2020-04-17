@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2017 Smart&Soft
+// Copyright (c) 2017
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package com.smartnsoft.recyclerview.wrapper;
+package com.smartnsoft.smartrecyclerview.wrapper;
 
 import android.content.Context;
 import androidx.databinding.DataBindingUtil;
@@ -30,7 +30,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.smartnsoft.recyclerview.attributes.SmartRecyclerDatabindingAttributes;
+import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerDatabindingAttributes;
 
 /**
  * A {@link SmartRecyclerViewWrapper} that allows the Databinding.

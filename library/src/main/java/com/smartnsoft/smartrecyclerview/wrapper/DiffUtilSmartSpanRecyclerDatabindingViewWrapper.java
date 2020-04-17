@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2017 Smart&Soft
+// Copyright (c) 2017
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,38 +20,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package com.smartnsoft.recyclerview.wrapper;
+package com.smartnsoft.smartrecyclerview.wrapper;
 
 import androidx.annotation.LayoutRes;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
+import com.smartnsoft.smartrecyclerview.adapter.DiffUtilSmartRecyclerAdapter;
 
 /**
- * A {@link SmartRecyclerViewWrapper} that can be used with a {@link GridLayoutManager} or a {@link StaggeredGridLayoutManager}.
+ * A {@link SmartSpanRecyclerDatabindingViewWrapper} that implements the {@link SmartDiffUtil} interface in order to be used with the {@link DiffUtilSmartRecyclerAdapter}.
  *
  * @param <BusinessObjectClass> the business object class which is represented by the current wrapper
- * @author Jocelyn Girard, Ludovic Roland, Adrien Vitti
- * @see SmartRecyclerViewWrapper
- * @since 2014.04.16
+ * @author Ludovic Roland
+ * @see SmartSpanRecyclerDatabindingViewWrapper
+ * @since 2018.07.04
  */
-public abstract class SmartSpanRecyclerViewWrapper<BusinessObjectClass>
-    extends SmartRecyclerViewWrapper<BusinessObjectClass>
+public abstract class DiffUtilSmartSpanRecyclerDatabindingViewWrapper<BusinessObjectClass>
+    extends SmartSpanRecyclerDatabindingViewWrapper<BusinessObjectClass>
+    implements SmartDiffUtil
 {
 
-  private final int spanSize;
-
-  protected SmartSpanRecyclerViewWrapper(BusinessObjectClass businessObject, int type, @LayoutRes int layoutResourceId,
-      int spanSize)
+  protected DiffUtilSmartSpanRecyclerDatabindingViewWrapper(BusinessObjectClass businessObject, int type,
+      @LayoutRes int layoutResourceId, int spanSize)
   {
-    super(businessObject, type, layoutResourceId);
-
-    this.spanSize = spanSize;
+    super(businessObject, type, layoutResourceId, spanSize);
   }
 
   @Override
-  public int getSpanSize()
+  public long getId()
   {
-    return spanSize;
+    throw new UnsupportedOperationException("You have to override the 'getId' method in order to return the unique identifier the of the item in the adapter");
   }
 
 }

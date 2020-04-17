@@ -2,9 +2,9 @@ package com.smartnsoft.smartrecyclerviewsample.adapter
 
 import android.content.Context
 
-import com.smartnsoft.recyclerview.adapter.DiffUtilSmartRecyclerAdapter
-import com.smartnsoft.recyclerview.attributes.SmartRecyclerAttributes
-import com.smartnsoft.recyclerview.wrapper.SmartRecyclerViewWrapper
+import com.smartnsoft.smartrecyclerview.adapter.DiffUtilSmartRecyclerAdapter
+import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes
+import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper
 
 /**
  * A simple implementation of the DiffUtilSmartRecyclerAdapter

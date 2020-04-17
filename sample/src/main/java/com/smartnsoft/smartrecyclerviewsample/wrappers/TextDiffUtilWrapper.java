@@ -3,7 +3,7 @@ package com.smartnsoft.smartrecyclerviewsample.wrappers;
 import android.content.Context;
 import android.view.View;
 
-import com.smartnsoft.recyclerview.wrapper.SmartDiffUtil;
+import com.smartnsoft.smartrecyclerview.wrapper.SmartDiffUtil;
 
 import com.smartnsoft.smartrecyclerviewsample.R;
 

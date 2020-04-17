@@ -4,7 +4,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import android.view.View;
 
-import com.smartnsoft.recyclerview.attributes.SmartRecyclerAttributes;
+import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
 
 /**
  * An Attributes which can be used with Android Databinding

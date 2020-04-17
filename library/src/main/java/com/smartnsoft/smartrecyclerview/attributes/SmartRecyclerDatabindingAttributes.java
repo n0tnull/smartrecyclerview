@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2017 Smart&Soft
+// Copyright (c) 2017
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,54 +20,45 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package com.smartnsoft.recyclerview.attributes;
+package com.smartnsoft.smartrecyclerview.attributes;
 
-import android.content.Context;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
-import android.view.View;
+import androidx.databinding.ViewDataBinding;
+import androidx.annotation.CallSuper;
 
 /**
- * Is responsible for creating a new {@link View}, which is able to represent the provided business object.
+ * A {@link SmartRecyclerAttributes} that uses databinding.
  *
- * @author Jocelyn Girard, Ludovic Roland
- * @since 2014.04.16
+ * @author Ludovic Roland
+ * @since 2018.07.04
  */
-public abstract class SmartRecyclerAttributes<BusinessObjectType>
-    extends ViewHolder
+public abstract class SmartRecyclerDatabindingAttributes<BusinessObjectType>
+    extends SmartRecyclerAttributes<BusinessObjectType>
 {
 
-  protected String intentFilterCategory;
+  protected ViewDataBinding viewDataBinding;
 
-  protected long businessObjectIdentifier = -1;
-
-  protected Context context;
-
-  public SmartRecyclerAttributes(View view)
+  public SmartRecyclerDatabindingAttributes(ViewDataBinding viewDataBinding)
   {
-    super(view);
+    super(viewDataBinding.getRoot());
 
+    this.viewDataBinding = viewDataBinding;
     this.context = itemView.getContext();
   }
 
-  public void setIntentFilterCategory(String intentFilterCategory)
-  {
-    this.intentFilterCategory = intentFilterCategory;
-  }
-
+  @CallSuper
+  @Override
   public void update(BusinessObjectType businessObject, boolean isSelected)
   {
     final long businessHashCode = System.identityHashCode(businessObject);
     if (businessObjectIdentifier != businessHashCode)
     {
+      bindViewModel(businessObject);
       onBusinessObjectUpdated(businessObject, isSelected);
 
       businessObjectIdentifier = businessHashCode;
     }
   }
 
-  public void onBusinessObjectUpdated(BusinessObjectType businessObject, boolean isSelected)
-  {
-    // Does not perform any update by default
-  }
+  protected abstract void bindViewModel(BusinessObjectType businessObject);
 
 }

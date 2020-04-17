@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView.LayoutManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.smartnsoft.recyclerview.adapter.DiffUtilSmartRecyclerAdapter;
-import com.smartnsoft.recyclerview.adapter.SmartRecyclerAdapter;
-import com.smartnsoft.recyclerview.wrapper.SmartRecyclerViewWrapper;
+import com.smartnsoft.smartrecyclerview.adapter.DiffUtilSmartRecyclerAdapter;
+import com.smartnsoft.smartrecyclerview.adapter.SmartRecyclerAdapter;
+import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper;
 
 import com.smartnsoft.smartrecyclerviewsample.adapter.SampleDiffUtilSmartRecyclerAdapter;
 import com.smartnsoft.smartrecyclerviewsample.wrappers.TextDiffUtilWrapper;

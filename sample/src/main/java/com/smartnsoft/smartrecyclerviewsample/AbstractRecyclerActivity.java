@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.LayoutManager;
 
-import com.smartnsoft.recyclerview.adapter.SmartRecyclerAdapter;
-import com.smartnsoft.recyclerview.wrapper.SmartRecyclerViewWrapper;
+import com.smartnsoft.smartrecyclerview.adapter.SmartRecyclerAdapter;
+import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper;
 
 import com.smartnsoft.smartrecyclerviewsample.wrappers.ReorderTextWrapper;
 import com.smartnsoft.smartrecyclerviewsample.wrappers.SimpleImageWrapper;

@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2017 Smart&Soft
+// Copyright (c) 2017
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,29 +20,29 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package com.smartnsoft.recyclerview.wrapper;
+package com.smartnsoft.smartrecyclerview.wrapper;
 
 import androidx.annotation.LayoutRes;
 
-import com.smartnsoft.recyclerview.adapter.DiffUtilSmartRecyclerAdapter;
+import com.smartnsoft.smartrecyclerview.adapter.DiffUtilSmartRecyclerAdapter;
 
 /**
- * A {@link SmartSpanRecyclerDatabindingViewWrapper} that implements the {@link SmartDiffUtil} interface in order to be used with the {@link DiffUtilSmartRecyclerAdapter}.
+ * A {@link SmartRecyclerDatabindingViewWrapper} that implements the {@link SmartDiffUtil} interface in order to be used with the {@link DiffUtilSmartRecyclerAdapter}.
  *
  * @param <BusinessObjectClass> the business object class which is represented by the current wrapper
  * @author Ludovic Roland
- * @see SmartSpanRecyclerDatabindingViewWrapper
- * @since 2018.07.04
+ * @see SmartRecyclerDatabindingViewWrapper
+ * @since 2018.04.07
  */
-public abstract class DiffUtilSmartSpanRecyclerDatabindingViewWrapper<BusinessObjectClass>
-    extends SmartSpanRecyclerDatabindingViewWrapper<BusinessObjectClass>
+public abstract class DiffUtilSmartRecyclerDatabindingViewWrapper<BusinessObjectClass>
+    extends SmartRecyclerDatabindingViewWrapper<BusinessObjectClass>
     implements SmartDiffUtil
 {
 
-  protected DiffUtilSmartSpanRecyclerDatabindingViewWrapper(BusinessObjectClass businessObject, int type,
-      @LayoutRes int layoutResourceId, int spanSize)
+  protected DiffUtilSmartRecyclerDatabindingViewWrapper(BusinessObjectClass businessObject, int type,
+      @LayoutRes int layoutResourceId)
   {
-    super(businessObject, type, layoutResourceId, spanSize);
+    super(businessObject, type, layoutResourceId);
   }
 
   @Override

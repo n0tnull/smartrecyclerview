@@ -5,7 +5,7 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 
-import com.smartnsoft.recyclerview.wrapper.SmartRecyclerViewWrapper;
+import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper;
 
 import com.smartnsoft.smartrecyclerviewsample.bo.Person;
 import com.smartnsoft.smartrecyclerviewsample.wrappers.PersonWrapper;

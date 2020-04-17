@@ -6,7 +6,7 @@
   android:layout_height="match_parent"
 >
 
-  <com.smartnsoft.recyclerview.recyclerview.SmartReorderRecyclerView
+  <com.smartnsoft.smartrecyclerview.recyclerview.SmartReorderRecyclerView
     android:id="@+id/recyclerView"
     android:layout_width="0dp"
     android:layout_height="0dp"

@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2019 Smart&Soft
+// Copyright (c) 2017
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,13 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package com.smartnsoft.recyclerview.recyclerview
+package com.smartnsoft.smartrecyclerview.recyclerview
 
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ItemTouchHelper
 import android.util.AttributeSet
-import com.smartnsoft.recyclerview.adapter.SmartRecyclerAdapter
+import com.smartnsoft.smartrecyclerview.adapter.SmartRecyclerAdapter
 
 /**
  * A [androidx.recyclerview.widget.RecyclerView] that provides reordering with drag&amp;drop.

@@ -4,7 +4,7 @@ import androidx.annotation.DrawableRes;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.smartnsoft.recyclerview.attributes.SmartRecyclerAttributes;
+import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
 
 import com.smartnsoft.smartrecyclerviewsample.R;
 

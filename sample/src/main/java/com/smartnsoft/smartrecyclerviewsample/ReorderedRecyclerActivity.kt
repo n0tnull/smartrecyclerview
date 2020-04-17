@@ -1,6 +1,6 @@
 package com.smartnsoft.smartrecyclerviewsample
 
-import com.smartnsoft.recyclerview.adapter.SmartRecyclerAdapter
+import com.smartnsoft.smartrecyclerview.adapter.SmartRecyclerAdapter
 
 /**
  * An activity containing a simple way to use a ReorderRecyclerView

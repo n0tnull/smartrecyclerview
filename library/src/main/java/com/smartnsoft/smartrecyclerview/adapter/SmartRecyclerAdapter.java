@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2017 Smart&Soft
+// Copyright (c) 2017
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package com.smartnsoft.recyclerview.adapter;
+package com.smartnsoft.smartrecyclerview.adapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,8 +40,8 @@ import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.smartnsoft.recyclerview.attributes.SmartRecyclerAttributes;
-import com.smartnsoft.recyclerview.wrapper.SmartRecyclerViewWrapper;
+import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
+import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper;
 
 /**
  * A {@link RecyclerView} adapter, which works closely with the {@link SmartRecyclerViewWrapper}.

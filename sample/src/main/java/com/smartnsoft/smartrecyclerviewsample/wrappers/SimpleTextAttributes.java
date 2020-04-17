@@ -3,7 +3,7 @@ package com.smartnsoft.smartrecyclerviewsample.wrappers;
 import android.view.View;
 import android.widget.TextView;
 
-import com.smartnsoft.recyclerview.attributes.SmartRecyclerAttributes;
+import com.smartnsoft.smartrecyclerview.attributes.SmartRecyclerAttributes;
 
 import com.smartnsoft.smartrecyclerviewsample.R;
 
