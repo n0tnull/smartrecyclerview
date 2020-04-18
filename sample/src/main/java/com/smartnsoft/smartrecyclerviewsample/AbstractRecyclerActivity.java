@@ -15,6 +15,7 @@ import com.smartnsoft.smartrecyclerview.wrapper.SmartRecyclerViewWrapper;
 import com.smartnsoft.smartrecyclerviewsample.wrappers.ReorderTextWrapper;
 import com.smartnsoft.smartrecyclerviewsample.wrappers.SimpleImageWrapper;
 import com.smartnsoft.smartrecyclerviewsample.wrappers.SimpleTextWrapper;
+import com.smartnsoft.smartrecyclerviewsample.wrappers.TextViewBindingWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -99,15 +100,22 @@ public abstract class AbstractRecyclerActivity
                 }
                 wrappers.add(new SimpleImageWrapper(businessObject));
             } else {
-                wrappers.add(
-                        shouldActivateTextReordering() ?
-                                new ReorderTextWrapper("String #" + index)
-                                :
-                                new SimpleTextWrapper("String #" + index)
-                );
+                wrappers.add(createTextWrapper(index));
             }
         }
         return wrappers;
+    }
+
+    private SmartRecyclerViewWrapper<String> createTextWrapper(int index) {
+        if (shouldActivateTextReordering()) {
+            return new ReorderTextWrapper("String #" + index);
+        } else {
+            return
+                    index % 2 == 0 ?
+                    new TextViewBindingWrapper("ViewBinded String #" + index)
+                    :
+                    new SimpleTextWrapper("String #" + index);
+        }
     }
 
     protected boolean shouldActivateTextReordering() {
